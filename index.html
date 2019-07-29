@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <!--<title>TabDB</title>-->
+  </head>
+  <body>
+    <p>Original page here</p>
+    <textarea id='sqlTextArea' cols=100 rows=20 placeholder='sql here'>
+CREATE TABLE hello (a int, b char);
+INSERT INTO hello VALUES (0, 'hello');
+INSERT INTO hello VALUES (1, 'world');
+    </textarea>
+    <br>
+    <button onClick='windowManager.submitSQL()'>Run sql</button>
+    <br>
+    <button onClick='windowManager.createNewTab()'>Create new tab</button>
+    <!--<button onClick='openInBackground()'>Open @kkuchta in background</button>-->
+    <div>Space Available:<span id='spaceAvailable'>0</span>
+  </body>
+  <script src='./sql-wasm.js'></script>
+  <script src='./pako.js'></script>
+<!--TODO: use an actual module system-->
+  <script src='./tabManager.js'></script>
+  <script src='./database.js'></script>
+  <script src='./rootWindowManager.js'></script>
+  <script src='./dataWindowManager.js'></script>
+  <script src='./script.js'></script>
+</html>
