@@ -1,6 +1,7 @@
 import React from 'react';
 
 const createTab = () => {
+  window.windowManager.createNewTab({sqlTextArea: 'dfsfdsa'});
   console.log('here')
 }
 

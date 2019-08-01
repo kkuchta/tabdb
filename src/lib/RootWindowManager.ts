@@ -3,13 +3,13 @@ import Database from './Database'
 import DataWindowManager from './DataWindowManager'
 
 const WINDOW_NAME_PREFIX = "tab_db_data_window_";
-const WINDOW_ROOT_NAME = WINDOW_NAME_PREFIX + 'root';
+export const WINDOW_ROOT_NAME = WINDOW_NAME_PREFIX + 'root';
 
 export default class RootWindowManager{
   tabManager: any;
   database: any;
   tabs: any;
-  constructor(tabList: Window[]) {
+  constructor(tabList = [] as Window[]) {
     console.log("constructing with ", tabList);
     this.tabManager = new TabManager();
     this.database = new Database(this.tabManager);

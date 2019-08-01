@@ -9,8 +9,6 @@ const MAX_TABS = 100;
 // TODO: figure this out
 const MAX_TAB_CHARS = 100;
 
-
-
 if (window.name === '') window.name = WINDOW_ROOT_NAME;
 
 if (window.name === WINDOW_ROOT_NAME) {

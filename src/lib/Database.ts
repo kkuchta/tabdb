@@ -16,7 +16,10 @@ export default class Database {
     this.persistence = persistence;
     this.sqlite = null;
     // TODO: actually wait for this to load.
-    initSqlJs().then(sqlite => { this.sqlite = sqlite; });
+    const config = {
+      locateFile: (filename: string) => `/${filename}`
+    }
+    initSqlJs(config).then(sqlite => { this.sqlite = sqlite; });
   }
   runQuery(query: string) {
     const db = this.readDB();
