@@ -8,8 +8,6 @@ const MAX_TABS = 100;
 
 // TODO: figure this out
 const MAX_TAB_CHARS = 100;
-const WINDOW_NAME_PREFIX = "tab_db_data_window_"
-const WINDOW_ROOT_NAME = WINDOW_NAME_PREFIX + 'root'
 
 
 

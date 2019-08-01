@@ -7,7 +7,7 @@ class DataWindowManager {
     window.document.getElementById('sqlTextArea').value = textAreaText;
     window.document.body.style = 'display: block';
     (window.windowManager = new RootWindowManager(tabs))
-    windowManager.run();
+    window.windowManager.run();
   }
   submitSQL() {
     console.log("submitSQL is a no-op on data pages (UI should be hidden anyway)");

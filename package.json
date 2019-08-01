@@ -5,11 +5,15 @@
   "dependencies": {
     "@types/jest": "24.0.15",
     "@types/node": "12.6.8",
+    "@types/pako": "^1.0.1",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.5",
+    "@types/sql.js": "^1.0.1",
+    "pako": "^1.0.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "sql.js": "^1.0.0",
     "typescript": "3.5.3"
   },
   "scripts": {
