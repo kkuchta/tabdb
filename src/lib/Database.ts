@@ -9,6 +9,15 @@ interface Persistence {
   canFit: (db: string) => boolean;
   read: () => string;
 }
+
+export interface QueryResult {
+  readonly error?: string;
+  readonly rows?: {
+    columns: string[];
+    values: string[][];
+  }
+}
+
 export default class Database {
   persistence: Persistence;
   sqlite: any;
@@ -21,12 +30,14 @@ export default class Database {
     }
     initSqlJs(config).then(sqlite => { this.sqlite = sqlite; });
   }
-  runQuery(query: string) {
+  runQuery(query: string): QueryResult {
     const db = this.readDB();
     const result = db.exec(query);
     this.writeDB(db);
     // TODO: free db
-    return result;
+    //
+    if (result[0]) { return { rows: result[0] } }
+    return {};
   }
   writeDB(dbObject: any) {
     // Dump the entire db state.

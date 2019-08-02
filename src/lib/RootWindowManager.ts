@@ -1,5 +1,5 @@
 import TabManager from './TabManager'
-import Database from './Database'
+import Database, { QueryResult } from './Database'
 import DataWindowManager from './DataWindowManager'
 
 const WINDOW_NAME_PREFIX = "tab_db_data_window_";
@@ -19,12 +19,13 @@ export default class RootWindowManager{
     console.log("running");
     if (this.tabs == null) this.setTabList([]);
   }
-  submitSQL(sql: string) {
+  submitSQL(sql: string): QueryResult {
     //const sqlArea = document.getElementById('sqlTextArea') as HTMLTextAreaElement
     const result = this.database.runQuery(sql);
-    let resultText = result[0].columns.join("\t") + "\n";
-    resultText += result[0].values.map((row: string[]) => row.join("\t")).join("\n");
-    console.log(resultText);
+    //if (result.rows == 0) return {};
+    //let resultText = result[0].columns.join("\t") + "\n";
+    //resultText += result[0].values.map((row: string[]) => row.join("\t")).join("\n");
+    //console.log(resultText);
 
     //document.getElementById('sqlTextArea').value = resultText;
 
