@@ -17,7 +17,6 @@ class SQLControl extends Component {
     const { value } = this.state;
     this.setState({ lastQueryOutput: 'running...' });
     const result = window.windowManager.submitSQL(value);
-    console.log("result =", result)
     this.setState({ lastQueryOutput: result })
     console.log(this.state.value)
   }

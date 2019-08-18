@@ -25,6 +25,24 @@
   overflow: scroll;
   flex-grow: 1;
 }
+.queryOutput table {
+  display: table;
+}
+.queryOutput td {
+  display: table-cell;
+}
+.queryOutput tr {
+  display: table-row;
+}
+.queryOutput th {
+  display: table-cell;
+}
+.queryOutput thead {
+  display: table-header-group;
+}
+.queryOutput tbody {
+  display: table-row-group;
+}
 
 textArea {
   height: 200px;
