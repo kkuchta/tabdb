@@ -1,0 +1,16 @@
+.StatsBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.availableCharacters {
+  font-weight: bold;
+  margin: 20px;
+}
+.addTab {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 16px;
+}

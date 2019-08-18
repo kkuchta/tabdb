@@ -23,6 +23,10 @@
   color: #61dafb;
 }
 
+.Explanation {
+  margin: 40px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

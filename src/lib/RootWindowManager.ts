@@ -21,7 +21,12 @@ export default class RootWindowManager{
   }
   submitSQL(sql: string): QueryResult {
     //const sqlArea = document.getElementById('sqlTextArea') as HTMLTextAreaElement
-    const result = this.database.runQuery(sql);
+    let result: QueryResult;
+    try {
+      result = this.database.runQuery(sql);
+    } catch(err) {
+      result = { error: err.message };
+    }
     //if (result.rows == 0) return {};
     //let resultText = result[0].columns.join("\t") + "\n";
     //resultText += result[0].values.map((row: string[]) => row.join("\t")).join("\n");

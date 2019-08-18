@@ -1,0 +1,47 @@
+.SQLControl {
+  /*border: 1px solid green;*/
+  display: flex;
+  padding: 20px;
+}
+.SQLControl * {
+  display: flex;
+}
+
+.SQLControl button {
+  border-radius: 5px;
+  justify-content: center;
+}
+.input {
+  flex-direction: column;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.queryOutput {
+  margin-left: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: scroll;
+  flex-grow: 1;
+}
+
+textArea {
+  height: 200px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.runSQL {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.prefillButtons {
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.prefillButtons button {
+  padding: 5px 15px;
+}

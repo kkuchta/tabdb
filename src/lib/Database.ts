@@ -59,7 +59,7 @@ export default class Database {
         availableCharacters: () => number;
       };
       const pers = this.persistence as unknown as Foo;
-      throw new Error(`Not enough space to execute that query.  We'd need ${pers} characters of space, but we only have ${pers}.  Open more tabs to increase space!`);
+      throw new Error(`Not enough space to execute that query.  We'd need ${pers.requiredCharacters(base64Data)} characters of space, but we only have ${pers.availableCharacters()}.  Open more tabs to increase space!`);
     }
   }
 
