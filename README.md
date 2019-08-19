@@ -6,7 +6,9 @@ If you feel like you use your browser tabs as a database, why not make it offici
 
 This is an in-browser database that uses tab titles for storage.
 
-Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatenates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a strinc, zips it up, and spreads it out across the available tabs.
+Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatenates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a string, zips it up, and spreads it out across the available tabs.
+
+Play with it live at [tabdb.io].
 
 [![comic about bad ideas](http://www.poorlydrawnlines.com/wp-content/uploads/2017/07/an-idea.png)](http://www.poorlydrawnlines.com/comic/an-idea/)
 

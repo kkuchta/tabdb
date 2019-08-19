@@ -17,7 +17,7 @@ class FAQ extends React.Component {
         </li>
         <li>
           <span className='question'>Ok, what's it actually doing?</span>
-          Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatenates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a strinc, zips it up, and spreads it out across the available tabs.
+          Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatenates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a string, zips it up, and spreads it out across the available tabs.
         </li>
         <li>
           <span className='question'>To reiterate: How dare you?</span>
@@ -50,7 +50,7 @@ class FAQ extends React.Component {
         </li>
         <li>
           <span className='question'>Who's responsible for this nonsense?</span>
-          Blame <a href='https://twitter.com/kkuchta'>@kkuchta</a>.
+          Blame <a href='https://twitter.com/kkuchta'>@kkuchta</a>.  The source code (not appropriate for small children) is on [github](https://github.com/kkuchta/tabdb).
         </li>
       </ul>
     );
