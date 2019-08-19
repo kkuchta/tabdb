@@ -45,7 +45,7 @@ class FAQ extends React.Component {
         </li>
         <li>
           <span className='question'>Who's responsible for this nonsense?</span>
-          Blame <a href='https://twitter.com/kkuchta'>@kkuchta</a>.  The source code (not appropriate for small children) is on [github](https://github.com/kkuchta/tabdb).
+          Blame <a href='https://twitter.com/kkuchta'>@kkuchta</a>.  The source code (not appropriate for small children) is on <a href='https://github.com/kkuchta/tabdb'>Github</a>.
         </li>
       </ul>
     );
