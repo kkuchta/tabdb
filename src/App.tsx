@@ -2,6 +2,7 @@ import React from 'react';
 import Explanation from './components/Explanation';
 import StatsBar from './components/StatsBar';
 import SQLControl from './components/SQLControl';
+import FAQ from './components/FAQ';
 import './App.css';
 
 const App: React.FC = () => {
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Explanation />
       <StatsBar availableChars={availableCharacters}/>
       { availableCharacters > 0 && <SQLControl /> }
+      { availableCharacters > 0 && <FAQ /> }
       { availableCharacters <= 0 && <div>
         Click that button a few times to add storage space to your db!
       </div> }

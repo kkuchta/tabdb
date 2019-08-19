@@ -15,6 +15,7 @@
   flex-direction: column;
   width: 50%;
   margin-right: 10px;
+  flex-grow: 1;
 }
 
 .queryOutput {
@@ -53,6 +54,7 @@ textArea {
 .runSQL {
   margin-top: 10px;
   padding: 5px;
+  border: 2px solid black;
 }
 
 .prefillButtons {
@@ -62,4 +64,14 @@ textArea {
 }
 .prefillButtons button {
   padding: 5px 15px;
+}
+
+@media (max-width: 600px) {
+  .prefillButtons {
+    flex-direction: column;
+  }
+  .prefillButtons button {
+    margin-top: 10px;
+    width:100%;
+  }
 }

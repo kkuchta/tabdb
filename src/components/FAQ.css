@@ -1,0 +1,16 @@
+.FAQ .faqHideShow {
+  font-size: 24px;
+}
+.FAQ .faqHideShow:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.FAQ .question {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.FAQ li {
+  list-style: none;
+  margin-top: 20px;
+}
