@@ -1,0 +1,26 @@
+domain: "tabdb.io"
+name: "tabdb"
+region: "us-west-1"
+
+# This section's only used if you use scarr to register a domain.  Which fields
+# are required depends on what TLD you register.  See 
+# https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register-values-specify.html
+# for details.
+domainContact:
+  address1: 'fillmein'
+  address2: ''
+  city: 'fillmein'
+  contactType: 'PERSON'
+  countryCode: 'US'
+  email: 'kevin@kevinkuchta.com'
+  firstName: 'fillmein'
+  lastName: 'fillmein'
+  phoneNumber: '+1.4157582482'
+  state: 'CA'
+  zipCode: '94117'
+
+# A list of regexes to be run against paths in the current directory.  Any file path matching any of these regexes will not be synced to s3
+exclude:
+  - "scarr\\.yml"
+  - "^\\.git"
+  - "\\.DS_Store"
