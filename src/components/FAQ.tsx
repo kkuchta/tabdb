@@ -22,7 +22,6 @@ class FAQ extends React.Component {
         <li>
           <span className='question'>To reiterate: How dare you?</span>
           Someone <a href='https://twitter.com/jbrodley/status/1152411896667967490'>jokingly tweeted about using tabs as a database</a> and I thought "how hard could it be?"
-          I saw this tweet and couldn't let it go.
         </li>
         <li>
           <span className='question'>Ok, so why is this a good idea?</span>
@@ -42,10 +41,6 @@ class FAQ extends React.Component {
         </li>
         <li>
           <span className='question'>I think I actually have a legitimate use case for this</span>
-          Please reevaluate your life choices.
-        </li>
-        <li>
-          <span className='question'></span>
           Please reevaluate your life choices.
         </li>
         <li>
