@@ -10,9 +10,10 @@ const PREFILLS = {
 
 class SQLControl extends Component {
   state = {
-    value: '',
+    value: window.lastWindowData ? window.lastWindowData.textAreaText : '',
     lastQueryOutput: null
   }
+
   onSubmit = () => {
     const { value } = this.state;
     this.setState({ lastQueryOutput: 'running...' });
@@ -22,6 +23,12 @@ class SQLControl extends Component {
   }
   prefill = (key: string) => () => this.setState({ value: PREFILLS[key] });
   onSQLChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+
+    // We need this value for when we open a new tab.  I don't feel like adding
+    // a proper state management system like Redux just to move one variable on
+    // a joke project, so let's just yolo a global variable.
+    //window.sql = event.target.value;
+
     this.setState({value: event.target.value});
   };
   renderQueryOutput() {
