@@ -12,6 +12,7 @@ interface Persistence {
 
 export interface QueryResult {
   readonly error?: string;
+  readonly message?: string;
   readonly rows?: {
     columns: string[];
     values: string[][];

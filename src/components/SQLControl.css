@@ -16,6 +16,7 @@
   width: 50%;
   margin-right: 10px;
   flex-grow: 1;
+  flex-basis: 0;
 }
 
 .queryOutput {
@@ -25,6 +26,7 @@
   padding: 10px;
   overflow: scroll;
   flex-grow: 1;
+  flex-basis: 0;
 }
 .queryOutput table {
   display: table;

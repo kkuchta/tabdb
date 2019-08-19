@@ -16,10 +16,15 @@ class SQLControl extends Component {
 
   onSubmit = () => {
     const { value } = this.state;
-    this.setState({ lastQueryOutput: 'running...' });
-    const result = window.windowManager.submitSQL(value);
-    this.setState({ lastQueryOutput: result })
-    console.log(this.state.value)
+    this.setState({ lastQueryOutput: { message: 'running...' } });
+
+    // Add a half-second delay so it's clear something's happening.  I'm too
+    // lazy to make the UI reflect this in a better way.
+    setTimeout( () => {
+      const result = window.windowManager.submitSQL(value);
+      this.setState({ lastQueryOutput: result })
+      console.log(this.state.value)
+    }, 300 );
   }
   prefill = (key: string) => () => this.setState({ value: PREFILLS[key] });
   onSQLChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -38,6 +43,8 @@ class SQLControl extends Component {
       return <div>&lt;--- Run a query to get some output</div>;
     } else if (output.error != null) {
       return <div>Error: {output.error}</div>;
+    } else if (output.message != null) {
+      return <div>{output.message}</div>;
     } else if (output.rows != null && output.rows.values.length > 0) {
       return (
         <table>
