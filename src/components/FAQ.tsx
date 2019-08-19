@@ -17,7 +17,7 @@ class FAQ extends React.Component {
         </li>
         <li>
           <span className='question'>Ok, what's it actually doing?</span>
-          Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatonates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a strinc, zips it up, and spreads it out across the available tabs.
+          Every time you run an SQL query, it grabs all the data stored in the neighboring tabs' titles, concatenates it, unzips it, and loads it into an in-memory sqlite database.  It then runs the command, dumps the db state to a strinc, zips it up, and spreads it out across the available tabs.
         </li>
         <li>
           <span className='question'>To reiterate: How dare you?</span>
@@ -37,7 +37,7 @@ class FAQ extends React.Component {
           I didn't.  Browsers *really* frown on pop-unders.  Instead, we open a new tab in the foreground, copy over the UI to it, then ditch the UI to the current tab (which is now in the background).
         </li>
         <li>
-          <span className='question'>How are the tabs communicating with eachother?</span>
+          <span className='question'>How are the tabs communicating with each other?</span>
           The "root" tab was always opened by the most recent "data" tab, so the root tab can grab a reference to that tab with <code>window.opener</code>.  Likewise, we can get the <i>next</i> data tab with <code>window.opener.opener</code>, and so on to get all data tabs.
         </li>
         <li>
